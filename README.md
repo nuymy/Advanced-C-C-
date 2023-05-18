@@ -7,8 +7,6 @@ Thêm static vào lời gọi biến cục bộ: khởi tạo 1 lần và tồn 
 
 Extern lấy biến ở file khác, static gọi biến 1 lần rồi sử dụng trọn đời trong 1 file chương trình chứa nó.
 
-Static cục bộ và Static toàn cục.
-
 ALU: Arithmetic Logic Unit
 
 RAM đẩy về cho register, đẩy tiếp cho ALU, sau khi ALU thực hiện tính toán thì trả ngược lại biến về register rồi đẩy ngược lại về RAM.
