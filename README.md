@@ -75,6 +75,15 @@ Biến có register có tốc độ xử lý nhanh hơn RAM vì chỉ qua 2 bư�
         uint16_t var[2]
         uint64_t var[4]
 => Kích thước của chương trình này = 32 do biến có giá trị lớn nhất là 8byte * 4 mảng
+# Bài 11: Stack
+- Stack là một cấu trúc dữ liệu được sử dụng để lưu trữ các phần tử theo cơ chế "last-in, first-out" (LIFO). Điều này có nghĩa là phần tử cuối cùng được thêm vào stack sẽ được lấy ra đầu tiên.
+- Các thao tác thường sử dụng trong stack
++ push() to insert an element into the stack
++ pop() to remove an element from the stack
++ top() Returns the top element of the stack.
++ isEmpty() returns true if stack is empty else false.
++ size() returns the size of stack.
+- Lưu ý thêm thư viện: #include <stdbool.h>
 
 
 
