@@ -75,6 +75,24 @@ Biến có register có tốc độ xử lý nhanh hơn RAM vì chỉ qua 2 bư�
         uint16_t var[2]
         uint64_t var[4]
 => Kích thước của chương trình này = 32 do biến có giá trị lớn nhất là 8byte * 4 mảng
+# Bài 8: Goto
+- Câu lệnh goto được sử dụng để thay đổi luồng thực thi thông thường của chương trình bằng cách nhảy tới một phần khác của chương trình
+- setjmp(sử dụng setjump cho chương trình để khi gặp lỗi nó sẽ dừng chương trình và quay lại bước mà mình muốn)	
+- Macro setjmp và hàm longjmp được sử dụng cùng nhau chủ yếu khi xử lý lỗi hay xử lý ngoại lệ. Có thể nói rằng, sử dụng kết hợp macro setjmp và hàm longjmp là một phiên bản go to mạnh mẽ hơn.
+- longjmp là khá hữu ích khi bạn muốn thoát ra khỏi một tình huống lỗi tồi tệ nào đó, khi bạn muốn nhanh chóng đưa tôi quay trở lại phần đầu tiên.
+- TRY, CATCH, khi chương trình phức tạp, có nhiều câu điều kiện thì có thể dùng TRY, CATCH để thay thế
+- Khi một ngoại lệ bị bắt trong khối lệnh của từ khóa try, chương trình sẽ tìm đến khối lệnh catch để xử lý nó.
+- Đối với phần xử lý ngoại lệ không dùng đến phần tham số bên trong khối lệnh, chúng ta có thể bỏ qua việc đặt tên biến cho tham số ngoại lệ
+# Bài 9: Pointer
+- Biến bình thường dùng để lưu giá trị, biến con trỏ dùng để lưu địa chỉ giá trị
+- Để lấy giá trị từ địa chỉ con trỏ ta dùng:  *0xC1 =10;
+- Để lấy giá trị một đối tượng, ta dùng: &a;
+- con trỏ hàm void (*ptr)(int, int): Có thể thông qua con trỏ hàm buộc hàm khác là input parameter
+- Con trỏ void là con trỏ đặc biệt, nó có thể lưu giá trị với nhiều kiểu dữ liệu(int, char, ..) cùng một lúc
+- Con trỏ NULL: giá trị là 0, địa chỉ là 0x00
+- Ứng dụng pointer to pointer: Đây là 1 con trỏ cấp 2 lưu địa chỉ của con trỏ cấp 1 
+- Ex: int **ptp = 0xa3 => địa chỉ là 0xa3, giá trị là 0xc1
+- Nếu chỉ đơn thuần là đọc biến ra thì nên dùng giá trị, còn nếu cần thay đổi giá trị thì dùng pointer. Trong nhúng hay truy cập vào địa chỉ giá trị thay ghi nên hay sử dụng con trỏ
 # Bài 11: Stack
 - Stack là một cấu trúc dữ liệu được sử dụng để lưu trữ các phần tử theo cơ chế "last-in, first-out" (LIFO). Điều này có nghĩa là phần tử cuối cùng được thêm vào stack sẽ được lấy ra đầu tiên.
 - Các thao tác thường sử dụng trong stack
