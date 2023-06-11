@@ -102,6 +102,21 @@ Biến có register có tốc độ xử lý nhanh hơn RAM vì chỉ qua 2 bư�
 + isEmpty() returns true if stack is empty else false.
 + size() returns the size of stack.
 - Lưu ý thêm thư viện: #include <stdbool.h>
+# Bài 12: Queue
+- Queue là một cấu trúc dữ liệu được sử dụng để lưu trữ các phần tử và thực hiện các thao tác trên chúng theo cơ chế "First-In-First-Out" (FIFO), nghĩa là phần tử đầu tiên được đưa vào Queue sẽ được xử lý đầu tiên, và các phần tử mới hơn sẽ được đưa vào sau đó.
+- isEmpty(): To check if the queue is empty
+- isFull(): To check whether the queue is full or not
+- dequeue(): Removes the element from the frontal side of the queue
+- enqueue(): It inserts elements to the end of the queue
+- Front: Pointer element responsible for fetching the first element from the queue
+- Rear: Pointer element responsible for fetching the last element from the queue
+- Khi thêm data thì sẽ được thêm vào vị trí ngoài cùng bên trái, các data còn lại sẽ dịch sang phải.
+- Còn khi lấy bớt data thì lấy data ngoài cùng, các data còn lại sẽ dịch sang phải để lấp ô trống data vừa bị lấy đi
+# Bài 13: Tim kiem nhi phan
+![image](https://github.com/nuymy/Advanced-C-C-/assets/106459251/12f8bc5b-8c0f-448e-bd51-2b6588893bc9)
+- Tiến hành chia các mảng ra làm các mảng nhỏ hơn rồi so sánh giá trị cần tìm với giá trị chính giữa
+- Nếu giá trị > giá trị chính giữa thì giá trị thuộc về mảng bên phải
+- Nếu giá trị cần tìm < giá trị chính giữa của mảng thì giá trị thuộc về mảng bên trái
 
 
 
