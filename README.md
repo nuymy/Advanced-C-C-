@@ -117,6 +117,72 @@ Biến có register có tốc độ xử lý nhanh hơn RAM vì chỉ qua 2 bư�
 - Tiến hành chia các mảng ra làm các mảng nhỏ hơn rồi so sánh giá trị cần tìm với giá trị chính giữa
 - Nếu giá trị > giá trị chính giữa thì giá trị thuộc về mảng bên phải
 - Nếu giá trị cần tìm < giá trị chính giữa của mảng thì giá trị thuộc về mảng bên trái
+# Bài 14: Class
+- Ở trong class, phần biến sẽ được gọi là Property, còn phầm hàm sẽ được gọi là Method
+- Class hơn struct là có thể gán giá trị và có thể bao gồm cả hàm trong khi struct chỉ bao gồm tên biến
+- Những phần nằm trong public thì bạn có thể truy cập dễ dàng. Chỉ có thể dùng các class để có thể truy cập đến. Ngoài ra class cũng có thể truy cập để các member của public, private và protected
+- Object chỉ có thể truy cập public, không thể truy cập vào private và protected
+- Trong lập trình C++, có ba phạm vi truy cập khác nhau dùng để quản lý mức độ truy cập vào các thành viên (members) của một lớp (class). Ba phạm vi này là "public", "private" và "protected".
+•	Phạm vi truy cập "public": Các thành viên được khai báo trong phạm vi "public" có thể được truy cập từ bên trong lớp đó, từ bên trong các lớp con (derived class) và từ bên ngoài lớp đó.
+•	Phạm vi truy cập "private": Các thành viên được khai báo trong phạm vi "private" chỉ có thể được truy cập từ bên trong lớp đó, không thể truy cập từ bên trong các lớp con và từ bên ngoài lớp đó.
+•	Phạm vi truy cập "protected": Các thành viên được khai báo trong phạm vi "protected" có thể được truy cập từ bên trong lớp đó và từ bên trong các lớp con, nhưng không thể truy cập từ bên ngoài lớp đó.
+# Bài 15:OOP
+- Lập trình hướng đối tượng có 4 tính chất
++ Tính kế thừa (inheritance): cho phép một lớp con (subclass) có thể kế thừa các thuộc tính và phương thức từ lớp cha (superclass) của nó. Lớp con có thể mở rộng hoặc ghi đè các phương thức của lớp cha hoặc thêm các thuộc tính và phương thức mới.
+![image](https://github.com/nuymy/Advanced-C-C-/assets/106459251/75b0b37d-c50c-4ca4-8648-c8a727ceb24f)
++ Tính đa hình (polymorphism): Tính đa hình cho phép một đối tượng có thể có nhiều hình dạng và hành vi khác nhau. Tính đa hình thường được thực hiện thông qua việc sử dụng các lớp trừu tượng (abstract class) hoặc giao diện (interface).
++ Tính trừu tượng (abstraction): Tính trừu tượng cho phép ẩn đi các chi tiết bên trong của đối tượng và chỉ hiển thị các thông tin cần thiết. Tính trừu tượng thường được thực hiện thông qua lớp trừu tượng.
++ Tính đóng gói (encapsulation): Tính đóng gói cho phép ẩn đi các chi tiết bên trong của đối tượng và chỉ hiển thị các phương thức để tương tác với đối tượng đó. 
+
+- Overload: 2 function tên giống hệt nhau nhưng parameter lại khác thì gọi là overload
+- Overwrite: khi tìm trong class con không có thì sẽ tự động chạy lên hàm cha để tìm
+- Người dùng chỉ quan tâm kết quả vào và kết quả ra mà không cần quan tâm đến quá trình nên phần kết quả vào hoặc ra ta để trong phần public, còn phần quá trình ta sẽ để vào private
+- `vector` là một lớp template trong thư viện chuẩn (STL - Standard Template Library) được sử dụng để lưu trữ và quản lý một mảng linh hoạt các phần tử.  `vector` có thể lưu trữ các phần tử cùng kiểu dữ liệu và tự động quản lý kích thước của mảng. 
+- Dưới đây là một số phương thức quan trọng của `vector`:  
+1. `push_back()`: Thêm một phần tử vào cuối `vector`. 
+2. `pop_back()`: Xóa phần tử cuối cùng của `vector`. 
+3. `size()`: Trả về số lượng phần tử trong `vector`. 
+4. `at()`: Truy cập phần tử tại một vị trí cụ thể trong `vector`. 
+5. `insert()`: Chèn một phần tử vào vị trí cụ thể trong `vector`. 
+6. `erase()`: Xóa phần tử tại một vị trí cụ thể trong `vector`. 
+7. `clear()`: Xóa tất cả các phần tử trong `vector`. 
+8. `sort()`: Sắp xếp các phần tử trong `vector` theo thứ tự tăng dần.
+# Bài 16:List
+- Sử dụng vector khi giá trị được thêm vào và xoá đi theo tuần tự, vì những địa chỉ nó liền kề nhau nên duyệt phần tử nhanh hơn. Nhưng khi xoá phần tử ở giữa thì phải dịch phần tử qua 1 bên rồi mới xoá. Và khi xoá phần tử sẽ làm thay đổi vị trí các phần tử khác ở trong mảng
+- Sử dụng list để chèn và xoá những note ngẫu nhiên ở trong mảng
+- Để sử dụng `map`, bạn cần bao gồm thư viện `map` vào chương trình. Dưới đây là một số phương thức quan trọng của `map`:  
+1. `insert()`: Thêm một cặp khóa-giá trị vào `map`.
+2. `erase()`: Xóa một phần tử có khóa cụ thể trong `map`.
+3. `find()`: Tìm kiếm một phần tử có khóa cụ thể trong `map`. 
+4. `size()`: Trả về số lượng phần tử trong `map`. 
+5. `empty()`: Kiểm tra xem `map` có rỗng hay không
+- So sánh vector, map và list
+1. `vector`:   
+- Ưu điểm:      
+- Hỗ trợ truy cập ngẫu nhiên vào các phần tử.     
+- Dễ dàng thêm và xóa các phần tử ở cuối mảng.      
+- Cung cấp phương thức để thay đổi kích thước mảng linh hoạt.    
+- Nhược điểm:      
+- Thời gian thêm và xóa phần tử ở vị trí bất kỳ có thể lâu hơn so với `list`.      
+- Thời gian tìm kiếm phần tử phức tạp hơn so với `map` và `list`.  
+2. `map`:    
+- Ưu điểm:      
+- Hỗ trợ lưu trữ dữ liệu dưới dạng cặp khóa-giá trị.      
+- Các phần tử trong `map` được sắp xếp theo thứ tự tăng dần của khóa.      
+- Cung cấp phương thức tìm kiếm nhanh chóng dựa trên khóa.    
+- Nhược điểm:      
+- Không hỗ trợ truy cập ngẫu nhiên vào các phần tử.      
+- Thời gian thêm và xóa phần tử có thể lâu hơn so với `vector` và `list`.      
+- Cần sử dụng một khóa duy nhất cho mỗi phần tử.  
+3. `list`:    
+- Ưu điểm:      
+- Hỗ trợ thêm và xóa phần tử ở bất kỳ vị trí nào trong danh sách một cách hiệu quả.      
+- Thời gian tìm kiếm phần tử nhanh hơn so với `vector`.     
+ - Không cần cung cấp kích thước ban đầu của danh sách.    
+- Nhược điểm:     
+ - Thời gian truy cập ngẫu nhiên vào các phần tử chậm hơn so với `vector`.      
+- Không hỗ trợ sắp xếp tự động các phần tử.
+
 
 
 
